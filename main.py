@@ -1,18 +1,22 @@
 from sympy import *
 
-# Вариант 8 -> Меняем данные на данные варианта 3
+# Вариант 8 -> Меняем данные на данные варианта 3 -> меняем данные на данные 5 варианта
 
 # 1 способ
-k, T, C, L = symbols('k T C L') #XD
+<<<<<<< HEAD
+k, T, C, L = symbols('k T C L')
+=======
+k, T, C, L = symbols('k T C L')
+>>>>>>> new_vetka
 
-C_ost = 30000
+C_ost = 20000
 Am_lst = []
 C_ost_lst = []
 
-for i in range(7):
+for i in range(6):
   Am = (C - L) / T
-  C_ost -= Am.subs({C: 30000, T: 7, L: 0})
-  Am_lst.append(round(Am.subs({C: 30000, T: 7, L: 0}), 2))
+  C_ost -= Am.subs({C: 20000, T: 6, L: 0})
+  Am_lst.append(round(Am.subs({C: 20000, T: 6, L: 0}), 2))
   C_ost_lst.append(round(C_ost, 2))
 
 print('Am_lst:', Am_lst)
@@ -20,13 +24,13 @@ print('C_ost_lst:', C_ost_lst)
 
 # 2 Способ
 Aj = 0
-C_ost = 30000
+C_ost = 20000
 Am_lst_2 = []
 C_ost_lst_2 = []
-for i in range(7):
+for i in range(6):
   Am = k * 1 / T * (C - Aj)
-  C_ost -= Am.subs({C: 30000, k: 2, T: 7})
-  Am_lst_2.append(round(Am.subs({C: 30000, k: 2, T: 7}), 2))
+  C_ost -= Am.subs({C: 20000, k: 2, T: 6})
+  Am_lst_2.append(round(Am.subs({C: 20000, k: 2, T: 6}), 2))
   Aj += Am
   C_ost_lst_2.append(round(C_ost, 2))
 print('Am_lst_2:', Am_lst_2)
@@ -55,8 +59,8 @@ plt.show()
 
 # Pie chart
 vals = Am_lst_2
-labels = list(range(1, 7))
-explode = [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+labels = list(range(1, 6))
+explode = [0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
 fig, ax = plt.subplots()
 ax.pie(vals,
        labels=labels,
