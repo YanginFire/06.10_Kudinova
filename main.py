@@ -1,5 +1,6 @@
 from sympy import *
 
+
 # 1 способ
 k, T, C, L = symbols('k C T L') 
 
@@ -77,12 +78,6 @@ plt.show()
 
 plt.bar(tfame['Y'], tfame2['Am_lst_2'])
 plt.show()
-
-
-
-
-
-
 
 
 
