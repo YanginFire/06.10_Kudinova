@@ -3,7 +3,7 @@ from sympy import *
 # Вариант 8 -> Меняем данные на данные варианта 3
 
 # 1 способ
-k, T, C, L = symbols('k T C L') #:D
+k, T, C, L = symbols('k T C L') #XD
 
 C_ost = 30000
 Am_lst = []
